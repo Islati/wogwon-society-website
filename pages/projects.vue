@@ -16,14 +16,14 @@ const projects = ref([
     name: 'Skreet Media Inc.',
     description: 'Canadian Urban Record Label',
     imageUrl: '/imgs/projects/skreet-media-inc-white.png',
-    footerUrl: 'https://skreetmedia.com',
+    footerUrl: 'https://skreet.ca',
     imageClasses: 'bg-black hover:filter hover:invert object-contain lg:h-52 sm:h-32 w-96',
   },
   {
     name: 'Wogwon Society',
     description: 'Arts & Culture Not for Profit Organization',
     imageUrl: '/imgs/logo-dark.png',
-    footerUrl: 'https://wogwon.com/about',
+    footerUrl: 'https://wogwonsociety.com/about',
     coverAndFit: true,
     imageClasses: 'bg-white hover:filter hover:invert object-contain lg:h-52 sm:h-32 w-96',
   }

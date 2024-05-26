@@ -26,6 +26,9 @@ import {
             <NavigationMenuItem>
               <NavigationMenuLink href="/about" class="nav-link ml-2">About</NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink href="/projects" class="nav-link ml-2">Projects</NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
