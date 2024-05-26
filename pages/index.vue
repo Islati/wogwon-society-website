@@ -13,10 +13,16 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  title: "Home",
-  description: "Promoting music, arts, and culture through community-driven events and initiatives.",
-  image: "/imgs/logo-dark.png"
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Wogwon Society - Promoting Music, Arts, and Culture',
+  meta: [
+    { name: 'description', content: 'Wogwon Society is dedicated to promoting music, arts, and culture through community-driven events and initiatives.' },
+    { name: 'keywords', content: 'Wogwon Society, music, arts, culture, community events, non-profit' }
+  ],
+  // description: "Promoting music, arts, and culture through community-driven events and initiatives.",
+  // image: "/imgs/logo-dark.png"
 });
 </script>
 

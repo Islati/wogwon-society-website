@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import Project from "~/components/Project.vue";
-
-const props = defineProps<{
-  component?: boolean
-}>();
+import {useHead} from '@vueuse/head'
 
 const projects = ref([
   {
@@ -16,23 +13,36 @@ const projects = ref([
     name: 'Skreet Media Inc.',
     description: 'Canadian Urban Record Label',
     imageUrl: '/imgs/projects/skreet-media-inc-white.png',
-    footerUrl: 'https://skreet.ca',
-    imageClasses: 'bg-black hover:filter hover:invert object-contain lg:h-52 sm:h-32 w-96',
+    footerUrl: 'https://skreetmedia.com',
+    imageClasses: 'bg-black hover:filter hover:invert object-contain h-36 w-96',
   },
   {
     name: 'Wogwon Society',
     description: 'Arts & Culture Not for Profit Organization',
     imageUrl: '/imgs/logo-dark.png',
-    footerUrl: 'https://wogwonsociety.com/about',
+    footerUrl: 'https://wogwon.com/about',
     coverAndFit: true,
-    imageClasses: 'bg-white hover:filter hover:invert object-contain lg:h-52 sm:h-32 w-96',
+    imageClasses: 'bg-white hover:filter hover:invert object-contain h-36 w-96',
   }
 ]);
 
+useHead({
+  title: 'Our Projects - Wogwon Society',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore the various projects by Wogwon Society, including Spellbound Saga, Skreet Media Inc., and more.'
+    },
+    {
+      name: 'keywords',
+      content: 'Wogwon Society, projects, Spellbound Saga, Skreet Media Inc., arts, culture, community'
+    }
+  ]
+})
 </script>
 
 <template>
-  <main class="container mx-auto py-12 px-4" v-if="!component">
+  <main class="container mx-auto py-12 px-4">
     <section class="text-center mb-12">
       <h1 class="text-4xl font-bold text-secondary mb-4">Our Projects</h1>
     </section>
@@ -42,14 +52,23 @@ const projects = ref([
                :imageUrl="project.imageUrl" :footerUrl="project.footerUrl" :imageClasses="project.imageClasses"/>
     </section>
   </main>
-  <section v-else class="text-center mb-12">
-    <h2 class="text-3xl font-semibold text-black mb-4">Our Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <Project v-for="project in projects" :key="project.name" :title="project.name" :description="project.description"
-               :imageClasses="project.imageClasses" :imageUrl="project.imageUrl" :footerUrl="project.footerUrl"/>
-    </div>
-  </section>
 </template>
+
+<script setup>
+definePageMeta({
+  title: 'Our Projects - Wogwon Society',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore the various projects by Wogwon Society, including Spellbound Saga, Skreet Media Inc., and more.'
+    },
+    {
+      name: 'keywords',
+      content: 'Wogwon Society, projects, Spellbound Saga, Skreet Media Inc., arts, culture, community'
+    }
+  ]
+});
+</script>
 
 <style scoped>
 .logo {

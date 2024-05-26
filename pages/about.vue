@@ -1,8 +1,17 @@
 <script setup lang="ts">
 
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "~/components/ui/card";
-import {AspectRatio} from "radix-vue";
 import Projects from "~/pages/projects.vue";
+
+definePageMeta({
+  title: 'About Wogwon Society - Our Mission and Vision',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about Wogwon Society, our mission to foster a thriving community of creatives, and our vision to enrich lives through the arts.'
+    },
+    {name: 'keywords', content: 'Wogwon Society, about, mission, vision, arts, culture, community'}
+  ]
+});
 </script>
 
 <template>
