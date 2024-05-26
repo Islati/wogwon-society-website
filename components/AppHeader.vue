@@ -13,7 +13,7 @@ import {
     <div class="container-fluid mx-auto flex self-start justify-between">
       <div class="flex items-center">
         <img :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12">
-        <h1 class="text-white text-2xl font-semibold ml-4">Wogwon Society</h1>
+        <h1 class="text-white text-2xl font-semibold ml-4"><NuxtLink to="/" class="nav-link">Wogwon Society</NuxtLink></h1>
       </div>
     </div>
     <div class="container-fluid mx-auto flex items-center justify-end h-4">
