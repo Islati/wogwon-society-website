@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Project from "~/components/Project.vue";
-import {useHead} from '@vueuse/head'
 
 const projects = ref([
   {

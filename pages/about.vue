@@ -1,8 +1,6 @@
 <script setup lang="ts">
 
 import Projects from "~/pages/projects.vue";
-import { useHead } from '@vueuse/head';
-
 useHead({
   title: 'About Wogwon Society - Our Mission and Vision',
   meta: [

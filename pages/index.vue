@@ -13,8 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
-
 useHead({
   title: 'Wogwon Society - Promoting Music, Arts, and Culture',
   meta: [
