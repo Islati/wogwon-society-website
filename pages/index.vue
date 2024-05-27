@@ -1,5 +1,9 @@
 <template>
   <main class="container mx-auto p-8 text-center">
+    <Head>
+      <Title>{{ title }}</Title>
+      <Meta name="description" :content="title" />
+    </Head>
     <section class="md:mb-6 bg-cover">
       <div class="flex items-center justify-center h-full">
         <img src="/imgs/logo-dark.png" alt="Wogwon Society Logo" class="logo">
