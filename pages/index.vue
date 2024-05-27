@@ -1,9 +1,5 @@
 <template>
   <main class="container mx-auto p-8 text-center">
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta name="description" :content="title" />
-    </Head>
     <section class="md:mb-6 bg-cover">
       <div class="flex items-center justify-center h-full">
         <img src="/imgs/logo-dark.png" alt="Wogwon Society Logo" class="logo">
@@ -20,12 +16,13 @@
 useHead({
   title: 'Wogwon Society - Promoting Music, Arts, and Culture',
   meta: [
-    { name: 'description', content: 'Wogwon Society is dedicated to promoting music, arts, and culture through community-driven events and initiatives.' },
+    { name: 'description', content: '' },
     { name: 'keywords', content: 'Wogwon Society, music, arts, culture, community events, non-profit' }
   ],
-  // description: "Promoting music, arts, and culture through community-driven events and initiatives.",
-  // image: "/imgs/logo-dark.png"
 });
+
+const title = ref('Wogwon Society - Promoting Music, Arts, and Culture');
+const description = ref('Promoting music, arts, and culture through community-driven events, projects, and initiatives.');
 </script>
 
 <style scoped>

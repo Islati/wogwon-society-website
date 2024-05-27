@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
 import Projects from "~/pages/projects.vue";
+const title = ref("About Wogwon Society - Our Mission and Vision");
+
 useHead({
   title: 'About Wogwon Society - Our Mission and Vision',
   meta: [
@@ -8,19 +10,15 @@ useHead({
       name: 'description',
       content: 'Learn about Wogwon Society, our mission to foster a thriving community of creatives, and our vision to enrich lives through the arts.'
     },
-    {name: 'keywords', content: 'Wogwon Society, about, mission, vision, arts, culture, community'}
+    {name: 'keywords', content: 'Wogwon Society, about, mission, vision, arts, culture, community'},
+    {name: 'og:title', content: 'About Wogwon Society - Our Mission and Vision'},
   ]
 });
 
-const title = ref("About Wogwon Society - Our Mission and Vision");
 </script>
 
 <template>
   <main class="container mx-auto py-12 px-4">
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta name="description" :content="title" />
-    </Head>
     <section class="text-center mb-12">
       <h1 class="text-4xl font-bold text-secondary mb-4">About Wogwon Society</h1>
       <p class="text-lg text-secondary">Promoting music, arts, and culture through community-driven events and

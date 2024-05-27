@@ -45,16 +45,10 @@ if (!props.component) {
     ]
   })
 }
-
-const title = 'Our Projects - Wogwon Society';
 </script>
 
 <template>
   <main class="container mx-auto py-12 px-4">
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta name="description" :content="title" />
-    </Head>
     <section class="text-center mb-12">
       <h1 class="text-4xl font-bold text-secondary mb-4">Our Projects</h1>
     </section>
