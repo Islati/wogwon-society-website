@@ -26,10 +26,6 @@ useHead({
 });
 </script>
 
-<style>
-
-</style>
-
 <style scoped>
 .logo {
   will-change: filter;

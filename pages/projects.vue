@@ -14,7 +14,7 @@ const projects = ref([
     description: 'Canadian Urban Record Label',
     imageUrl: '/imgs/projects/skreet-media-inc-white.png',
     footerUrl: 'https://skreetmedia.com',
-    imageClasses: 'bg-black hover:filter hover:invert object-contain h-36 w-96',
+    imageClasses: 'bg-black hover:filter hover:invert object-contain xs:h-12 sm:h-36 md:h-42 lg:h-48 w-96',
   },
   {
     name: 'Wogwon Society',
@@ -22,23 +22,29 @@ const projects = ref([
     imageUrl: '/imgs/logo-dark.png',
     footerUrl: 'https://wogwon.com/about',
     coverAndFit: true,
-    imageClasses: 'bg-white hover:filter hover:invert object-contain h-36 w-96',
+    imageClasses: 'bg-white hover:filter hover:invert object-contain sm:h-36 md:h-42 lg:h-48 w-96',
   }
 ]);
 
-useHead({
-  title: 'Our Projects - Wogwon Society',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore the various projects by Wogwon Society, including Spellbound Saga, Skreet Media Inc., and more.'
-    },
-    {
-      name: 'keywords',
-      content: 'Wogwon Society, projects, Spellbound Saga, Skreet Media Inc., arts, culture, community'
-    }
-  ]
-})
+const props = defineProps<{
+  component?: boolean
+}>();
+
+if (!props.component) {
+  useHead({
+    title: 'Our Projects - Wogwon Society',
+    meta: [
+      {
+        name: 'description',
+        content: 'Explore the various projects by Wogwon Society, including Spellbound Saga, Skreet Media Inc., and more.'
+      },
+      {
+        name: 'keywords',
+        content: 'Wogwon Society, projects, Spellbound Saga, Skreet Media Inc., arts, culture, community'
+      }
+    ]
+  })
+}
 </script>
 
 <template>
@@ -54,35 +60,5 @@ useHead({
   </main>
 </template>
 
-<script setup>
-definePageMeta({
-  title: 'Our Projects - Wogwon Society',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore the various projects by Wogwon Society, including Spellbound Saga, Skreet Media Inc., and more.'
-    },
-    {
-      name: 'keywords',
-      content: 'Wogwon Society, projects, Spellbound Saga, Skreet Media Inc., arts, culture, community'
-    }
-  ]
-});
-</script>
-
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
