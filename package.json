@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "bunx gh-pages --dotfiles -d .output/public"
+    "deploy": "bunx nuxt build --preset github_pages && bunx gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@radix-icons/vue": "^1.0.0",
