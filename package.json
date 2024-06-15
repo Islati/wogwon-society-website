@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "bunx nuxt build --preset github_pages && bunx gh-pages --dotfiles -d .output/public"
+    "deploy": "bunx nuxt build --preset github_pages && cp ./CNAME .output/public && echo 'Moved CNAME' && bunx gh-pages --dotfiles -d .output/public && echo 'Deployed to gh-pages'. Wogwon Society"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
