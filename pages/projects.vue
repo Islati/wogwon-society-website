@@ -5,21 +5,21 @@ const projects = ref([
   {
     name: 'Spellbound Saga',
     description: 'Card Game to save the world from litter.',
-    imageUrl: '/imgs/projects/spellbound-saga.png',
+    imageUrl: '/imgs/projects/spellbound-saga.webp',
     footerUrl: 'https://spellboundsaga.com',
     imageClasses: 'object-contain xs:h-4/5 sm:h-36 md:h-42 lg:h-48 w-96'
   },
   {
     name: 'Skreet Media Inc.',
     description: 'Canadian Urban Record Label',
-    imageUrl: '/imgs/projects/skreet-media-inc-white.png',
+    imageUrl: '/imgs/projects/skreet-media-inc-white.webp',
     footerUrl: 'https://skreetmedia.com',
     imageClasses: 'bg-black hover:filter hover:invert object-contain xs:h-4/5 sm:h-36 md:h-42 lg:h-48 w-96',
   },
   {
     name: 'Wogwon Society',
     description: 'Arts & Culture Not for Profit Organization',
-    imageUrl: '/imgs/logo-dark.png',
+    imageUrl: '/imgs/logo-dark.webp',
     footerUrl: 'https://wogwon.com/about',
     coverAndFit: true,
     imageClasses: 'bg-white hover:filter hover:invert object-contain xs:h-4/5 sm:h-36 md:h-42 lg:h-48 w-96',

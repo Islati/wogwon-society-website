@@ -22,9 +22,10 @@ const {title, description, imageUrl, footerUrl, imageClasses} = props;
     </CardHeader>
     <CardContent class="flex">
       <AspectRatio :ratio="16/9">
-        <img :src="imageUrl" :alt="title" class="rounded-lg hover:scale-105 duration-150"
+        <NuxtImg :src="imageUrl" :alt="title" class="rounded-lg hover:scale-105 duration-150"
              :class="[imageClasses]"
-        >
+                 height="192" width="335" format="webp" fit="inside"
+        />
       </AspectRatio>
     </CardContent>
     <CardFooter class="justify-center flex">

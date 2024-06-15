@@ -12,7 +12,7 @@ import {
   <header class="bg-secondary p-2 flex items-center justify-between">
     <div class="container-fluid mx-auto flex self-start justify-between">
       <div class="flex items-center">
-        <img :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12">
+        <NuxtImg :src="'/imgs/logo.webp'" alt="Wogwon Society Logo" class="h-12" height="48" width="57" format="webp"/>
         <h1 class="text-white text-2xl font-semibold ml-4"><NuxtLink to="/" class="nav-link">Wogwon Society</NuxtLink></h1>
       </div>
     </div>

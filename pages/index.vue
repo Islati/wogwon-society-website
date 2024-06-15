@@ -2,7 +2,7 @@
   <main class="container mx-auto p-8 text-center">
     <section class="md:mb-6 bg-cover">
       <div class="flex items-center justify-center h-full">
-        <img src="/imgs/logo-dark.png" alt="Wogwon Society Logo" class="logo">
+        <NuxtImg :src="'/imgs/logo-dark.webp'" alt="Wogwon Society Logo" class="logo" height="721" width="602" format="webp" fit="inside"/>
       </div>
     </section>
     <section class="md:mb-2 sm:mb-6">
@@ -18,7 +18,7 @@ useHead({
   meta: [
     { name: 'description', content: '' },
     { name: 'keywords', content: 'Wogwon Society, music, arts, culture, community events, non-profit' }
-  ],
+  ]
 });
 
 const title = ref('Wogwon Society - Promoting Music, Arts, and Culture');
