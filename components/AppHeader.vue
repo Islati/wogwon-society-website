@@ -4,7 +4,7 @@
       <div class="flex items-center">
         <NuxtImg :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12 w-14" format="webp"/>
         <h1 class="text-white text-2xl font-semibold ml-4">
-          <NuxtLink to="/" class="nav-link">Wogwon Society</NuxtLink>
+          <NuxtLink to="#" class="nav-link">Wogwon Society</NuxtLink>
         </h1>
       </div>
       <nav class="hidden md:flex items-center space-x-4">
