@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden flex">
+  <div class="relative w-full h-screen flex">
     <div class="fixed top-0 left-0 w-full h-full z-0">
       <video id="background-video" autoplay muted loop playsinline class="bg-video">
         <source src="/vids/wogwon-society-bg.webm" type="video/webm">
@@ -31,8 +31,8 @@
            ref="ourVision"
            class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
            :class="{
-             'opacity-0 translate-x-5': !showVision,
-             'opacity-100 translate-x-0': showVision
+             'opacity-0 translate-y-5': !showVision,
+             'opacity-100 translate-y-0': showVision
            }">
     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-3xl">
       <h2 class="text-2xl font-semibold text-primary dark:text-white mb-4">Our Vision</h2>
@@ -65,8 +65,8 @@
            ref="involvementSection"
            class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
            :class="{
-             'opacity-0 translate-x-5': !showInvolvement,
-             'opacity-100 translate-x-0': showInvolvement
+             'opacity-0 translate-y-5': !showInvolvement,
+             'opacity-100 translate-y-0': showInvolvement
            }">
     <div class="text-center">
       <h2 class="text-3xl font-semibold text-white mb-4">Get Involved</h2>
@@ -157,14 +157,25 @@ onMounted(() => {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   filter: blur(10px);
   transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure the video is behind other content */
+  overflow: hidden; /* Prevent the video from causing overflow */
 }
 
 .observe-section {
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  width: 100%; /* Ensure sections take full width */
+  padding: 0; /* Remove any padding to prevent overflow */
+}
+
+@media (max-width: 640px) {
+  .observe-section {
+    padding: 0 !important; /* Ensure no padding on smaller screens */
+    margin: 0 !important; /* Ensure no margin on smaller screens */
+  }
 }
 </style>
