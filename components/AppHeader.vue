@@ -2,7 +2,7 @@
   <header class="sticky top-0 left-0 w-full z-50 bg-secondary p-2 flex items-center justify-between">
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <NuxtImg :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12 w-14" format="webp"/>
+        <NuxtImg :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12 w-14" height="48" width="56" format="webp"/>
         <h1 class="text-white text-2xl font-semibold ml-4">
           <NuxtLink to="#" class="nav-link">Wogwon Society</NuxtLink>
         </h1>

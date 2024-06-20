@@ -70,8 +70,18 @@
            }">
     <div class="text-center">
       <h2 class="text-3xl font-semibold text-white mb-4">Get Involved</h2>
-      <p class="text-white mb-8">Join us in our mission to promote the arts and culture. Whether you're an artist, a
-        volunteer, or an investor, your support can make a significant impact.</p>
+      <div class="text-center mt-8">
+        <p class="text-lg text-white mb-4">
+          Join Our Creative Community! Discover the vibrant world of Wogwon Society. Whether you're an artist, gamer, or
+          volunteer, we welcome you to get involved in our exciting projects. Connect with us today!
+        </p>
+        <a href="mailto:info@wogwon.com"
+           class="inline-flex items-center bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition duration-300 mt-2">
+
+          Contact Us
+        </a>
+      </div>
+
     </div>
   </section>
 </template>
