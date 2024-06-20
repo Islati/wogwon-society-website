@@ -10,8 +10,11 @@
     <main
         id="mission-vision"
         ref="missionVision"
-        class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-opacity duration-1000"
-        :class="{ 'opacity-0': !showMissionVision, 'opacity-100': showMissionVision }">
+        class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
+        :class="{
+          'opacity-0 translate-y-5': !showMissionVision,
+          'opacity-100 translate-y-0': showMissionVision
+        }">
       <div class="text-center">
         <h1 class="text-4xl font-bold text-secondary mb-4 text-white">About Wogwon Society</h1>
         <p class="text-lg text-secondary mb-8 text-white">Promoting music, arts, and culture through community-driven
@@ -26,8 +29,11 @@
 
   <section id="our-vision"
            ref="ourVision"
-           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-opacity duration-1000"
-           :class="{ 'opacity-0': !showVision, 'opacity-100': showVision }">
+           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
+           :class="{
+             'opacity-0 translate-x-5': !showVision,
+             'opacity-100 translate-x-0': showVision
+           }">
     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-3xl">
       <h2 class="text-2xl font-semibold text-primary dark:text-white mb-4">Our Vision</h2>
       <p class="text-gray-700 dark:text-gray-300">We envision a world where the arts and culture flourish, bringing
@@ -37,9 +43,11 @@
 
   <section id="projects"
            ref="projectsSection"
-           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-opacity duration-1000"
-           :class="{ 'opacity-0': !showProjects, 'opacity-100': showProjects }">
-
+           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
+           :class="{
+             'opacity-0 translate-y-5': !showProjects,
+             'opacity-100 translate-y-0': showProjects
+           }">
     <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
       <Project
           v-for="project in projects"
@@ -51,13 +59,15 @@
           :imageClasses="project.imageClasses"
       />
     </section>
-
   </section>
 
   <section id="involvement"
            ref="involvementSection"
-           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-opacity duration-1000"
-           :class="{ 'opacity-0': !showInvolvement, 'opacity-100': showInvolvement }">
+           class="observe-section z-10 w-full h-screen flex flex-col justify-center items-center transition-all duration-1000 transform"
+           :class="{
+             'opacity-0 translate-x-5': !showInvolvement,
+             'opacity-100 translate-x-0': showInvolvement
+           }">
     <div class="text-center">
       <h2 class="text-3xl font-semibold text-white mb-4">Get Involved</h2>
       <p class="text-white mb-8">Join us in our mission to promote the arts and culture. Whether you're an artist, a
@@ -140,6 +150,7 @@ onMounted(() => {
   setupIntersectionObserver(involvementSection, 'involvement');
 });
 </script>
+
 
 <style scoped>
 .bg-video {
