@@ -8,24 +8,25 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "bunx nuxt build --preset github_pages && cp ./CNAME .output/public && echo 'Moved CNAME' && bunx gh-pages --dotfiles -d .output/public && echo 'Deployed to gh-pages'. Wogwon Society"
+    "deploy": "bunx nuxt build --preset github_pages && cp ./CNAME .output/public && echo 'Moved CNAME' && bunx gh-pages --dotfiles -d .output/public && echo 'Deployed to gh-pages'. Wogwon Society",
+    "lighthouse": "bunx unlighthouse --site https://skreet.ca"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
     "@radix-icons/vue": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "nuxt": "^3.11.2",
-    "radix-vue": "^1.8.2",
+    "nuxt": "^3.12.2",
+    "radix-vue": "^1.8.4",
     "shadcn-nuxt": "^0.10.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.0",
-    "sass": "^1.77.2",
+    "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
     "typescript": "^5.4.5"
   }

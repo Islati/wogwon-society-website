@@ -1,2 +1,6 @@
 @import "nav-link.css";
 @import "bg-cover.css";
+
+* {
+    backface-visibility: hidden;
+}
