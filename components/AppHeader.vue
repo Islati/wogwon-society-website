@@ -9,7 +9,7 @@ import {
 </script>
 
 <template>
-  <header class="bg-secondary p-2 flex items-center justify-between">
+  <header class="bg-secondary p-2 flex items-center justify-between fixed top-0 left-0 w-full z-20">
     <div class="container-fluid mx-auto flex self-start justify-between">
       <div class="flex items-center">
         <NuxtImg :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12" height="48" width="57" format="webp"/>
@@ -34,7 +34,6 @@ import {
       </div>
     </div>
   </header>
-
 </template>
 
 <style scoped>
