@@ -16,12 +16,15 @@
           'opacity-100 translate-y-0': showMissionVision
         }">
       <div class="text-center">
-        <h1 class="text-4xl font-bold text-secondary mb-4 text-white">About Wogwon Society</h1>
-        <p class="text-lg text-secondary mb-8 text-white">Promoting music, arts, and culture through community-driven
-          events and initiatives.</p>
+        <h1 class="text-4xl font-bold text-secondary mb-4 text-white drop-shadow">About Wogwon Society</h1>
+        <p v-hover-fx class="text-lg text-white mb-8 drop-shadow relative hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 bg-clip-text animate-iridescent">
+          Promoting culture through community-driven events and initiatives.
+        </p>
       </div>
       <div class="mb-6 text-center">
-        <NuxtImg :src="'/imgs/logo-dark.webp'" alt="Wogwon Society Logo" class="mx-auto h-28 w-42" format="webp"
+        <NuxtImg :src="'/imgs/logo-dark.webp'" alt="Wogwon Society Logo"
+                 class="mx-auto h-28 w-42 transition-all duration-200 ease-in-out transform hover:drop-shadow hover:scale-y-105"
+                 format="webp"
                  fit="inside"/>
       </div>
     </main>
@@ -34,7 +37,7 @@
              'opacity-0 translate-y-5': !showVision,
              'opacity-100 translate-y-0': showVision
            }">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-3xl">
+    <div class="bg-white dark:bg-white p-6 rounded-lg shadow-lg text-center max-w-3xl">
       <h2 class="text-2xl font-semibold text-primary dark:text-white mb-4">Our Vision</h2>
       <p class="text-gray-700 dark:text-gray-300">We envision a world where the arts and culture flourish, bringing
         people together and enriching lives through shared experiences and creative endeavors.</p>
@@ -87,7 +90,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted} from 'vue';
+import {onMounted, ref} from 'vue';
 import {useIntersectionObserver} from '@vueuse/core';
 import Project from '~/components/Project.vue';
 
@@ -188,4 +191,6 @@ onMounted(() => {
     margin: 0 !important; /* Ensure no margin on smaller screens */
   }
 }
+
+
 </style>

@@ -9,17 +9,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deploy": "bunx nuxt build --preset github_pages && cp ./CNAME .output/public && echo 'Moved CNAME' && bunx gh-pages --dotfiles -d .output/public && echo 'Deployed to gh-pages'. Wogwon Society",
-    "lighthouse": "bunx unlighthouse --site https://skreet.ca"
+    "lighthouse": "bunx unlighthouse --site https://wogwon.com"
   },
   "dependencies": {
-    "@nuxt/image": "^1.7.0",
-    "@radix-icons/vue": "^1.0.0",
+    "@nuxt/image": "latest",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "nuxt": "^3.12.2",
-    "radix-vue": "^1.8.4",
-    "shadcn-nuxt": "^0.10.4",
-    "tailwind-merge": "^2.3.0",
+    "nuxt": "latest",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"

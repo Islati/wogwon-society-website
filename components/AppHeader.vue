@@ -1,30 +1,31 @@
 <template>
-  <header class="sticky top-0 left-0 w-full z-50 bg-secondary p-2 flex items-center justify-between">
+  <header class="sticky top-0 left-0 w-full z-50 p-2 flex items-center justify-between">
     <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo and site title -->
       <div class="flex items-center">
-        <NuxtImg :src="'/imgs/logo.png'" alt="Wogwon Society Logo" class="h-12 w-14" height="48" width="56" format="webp"/>
+        <img src="/imgs/logo.png" alt="Wogwon Society Logo" class="h-12 w-14" />
         <h1 class="text-white text-2xl font-semibold ml-4">
-          <NuxtLink to="#" class="nav-link">Wogwon Society</NuxtLink>
+          <a href="#" class="nav-link">Wogwon Society</a>
         </h1>
       </div>
+      <!-- Navigation for larger screens -->
       <nav class="hidden md:flex items-center space-x-4">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#mission-vision" class="nav-link" @click="scrollToSection('mission-vision')">Home</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem class="mx-0.5">
-              <NavigationMenuLink href="#our-vision" class="nav-link" @click="scrollToSection('our-vision')">Vision</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem class="mx-0.5">
-              <NavigationMenuLink href="#projects" class="nav-link" @click="scrollToSection('projects')">Projects</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#involvement" class="nav-link" @click="scrollToSection('involvement')">Get Involved</NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#mission-vision" class="nav-link" @click="scrollToSection('mission-vision')">Home</a>
+          </li>
+          <li class="mx-0.5">
+            <a href="#our-vision" class="nav-link" @click="scrollToSection('our-vision')">Vision</a>
+          </li>
+          <li class="mx-0.5">
+            <a href="#projects" class="nav-link" @click="scrollToSection('projects')">Projects</a>
+          </li>
+          <li>
+            <a href="#involvement" class="nav-link" @click="scrollToSection('involvement')">Get Involved</a>
+          </li>
+        </ul>
       </nav>
+      <!-- Mobile menu button -->
       <div class="md:hidden flex items-center">
         <button @click="toggleMobileMenu" class="text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,30 +34,24 @@
         </button>
       </div>
     </div>
+    <!-- Mobile navigation menu -->
     <transition name="slide-fade">
-      <div v-if="mobileMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 flex justify-end">
-        <div class="fixed top-0 right-0 w-3/4 max-w-sm h-full bg-secondary p-4 overflow-y-auto">
-          <button @click="toggleMobileMenu" class="text-white focus:outline-none mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-          <NavigationMenu>
-            <NavigationMenuList class="flex flex-col space-y-2">
-              <NavigationMenuItem>
-                <NavigationMenuLink href="#mission-vision" class="nav-link" @click="scrollToSection('mission-vision'); toggleMobileMenu()">Home</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href="#our-vision" class="nav-link" @click="scrollToSection('our-vision'); toggleMobileMenu()">Vision</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href="#projects" class="nav-link" @click="scrollToSection('projects'); toggleMobileMenu()">Projects</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href="#involvement" class="nav-link" @click="scrollToSection('involvement'); toggleMobileMenu()">Get Involved</NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+      <div v-if="mobileMenuOpen" class="fixed top-0 left-0 w-full h-full bg-secondary overflow-y-auto">
+        <div class="container mx-auto p-4">
+          <ul class="flex flex-col space-y-4 text-center">
+            <li>
+              <a href="#mission-vision" class="nav-link" @click="scrollToSection('mission-vision'); toggleMobileMenu()">Home</a>
+            </li>
+            <li>
+              <a href="#our-vision" class="nav-link" @click="scrollToSection('our-vision'); toggleMobileMenu()">Vision</a>
+            </li>
+            <li>
+              <a href="#projects" class="nav-link" @click="scrollToSection('projects'); toggleMobileMenu()">Projects</a>
+            </li>
+            <li>
+              <a href="#involvement" class="nav-link" @click="scrollToSection('involvement'); toggleMobileMenu()">Get Involved</a>
+            </li>
+          </ul>
         </div>
       </div>
     </transition>
@@ -65,12 +60,6 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList
-} from "@/components/ui/navigation-menu";
 
 function scrollToSection(sectionId: string) {
   const section = document.getElementById(sectionId);
@@ -86,11 +75,7 @@ function toggleMobileMenu() {
 }
 
 watch(mobileMenuOpen, (newValue) => {
-  if (newValue) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-  }
+  document.body.style.overflow = newValue ? 'hidden' : 'auto';
 });
 </script>
 
@@ -100,7 +85,7 @@ watch(mobileMenuOpen, (newValue) => {
 }
 
 .nav-link:hover {
-  @apply text-yellow-500; /* Adjust hover color as needed */
+  @apply text-yellow-500;
 }
 
 .slide-fade-enter-active, .slide-fade-leave-active {
